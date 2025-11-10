@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatbot</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+      function ChatInput(){
+        return (
+            <div>
+              <input placeholder="Envie uma mensagem para o assistente" size="30"/>
+              <button>Send</button>
+            </div>
+        );
+      }
+
+      function ChatMessage({ message, sender }){
+          // const message = props.message;
+          // const sender = props.sender;
+          //const {message, sender} = props;
+
+          /*
+          if (sender === 'robot'){
+            return (
+              <div>
+                <img src="imagens/simboloGimm_icone.ico" />
+                {message}
+              </div>
+            );
+          }
+          */
+
+          return (
+            <div>
+              {sender === 'robot' && <img src="imagens/simboloGimm_icone.ico" />}
+              {message}
+              <img src="imagens/simboloGimm_icone.ico" />
+            </div>
+          );
+      }
+
+      const app = (
+        <> 
+            <ChatInput /> 
+            <ChatMessage message="Olá assistente" />
+            <ChatMessage message="Olá! Como posso ajudar?" sender="robot"/>
+        </>
+      );
+
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(app);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fdfdfd; /* fundo leve */
+  color: #404040;
+}
+
+/* Container principal do conteúdo */
+.boxcontainer {
+  background: #ffffffcc; /* leve transparência */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07); /* sombra mais suave e moderna */
+  border-radius: 10px; /* cantos levemente arredondados */
+  padding: 20px 0;
+}
+
+/* Imagem de logo */
+.logo {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 20px auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.03); /* leve efeito hover */
+}
+
+/* Banner superior */
+.divbanner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.banner {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 70px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* sombra elegante */
+  transition: transform 0.3s ease;
+}
+
+/* Texto sob o banner */
+.legenda {
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 15px;
+  color: #555;
+  margin: 8px auto 0 auto;
+  text-align: center;
+}
+
+/* Título principal */
+.title {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #2f2f2f;
+  letter-spacing: 0.5px;
+  margin: 30px 0 20px;
+}
+
+.title2 {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #2f2f2f;
+  letter-spacing: 0.5px;
+  margin: 40px 0 40px;
+  margin-right: 40px;
+}
+
+/* Textos dos parágrafos */
+.text1,
+.text2 {
+  text-align: justify;
+  font-size: 17px;
+  font-weight: 500;
+  color: #444;
+  line-height: 1.8;
+  display: block;
+  margin: 0 0 26px;
+  padding: 0 10px;
+}
+
+/* Centralização do conteúdo principal */
+.divcentral {
+  width: 90%;
+  max-width: 900px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 5vh 2vw;
+  padding-top: 50px;
+  background: #fff; /* leve fundo branco para destaque */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+
+.divEsq{
+    width: 500px;
+    min-height: 100%;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+
+
+/* BARRA SUPERIOR*/
+
+.navleft {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: linear-gradient(90deg, #2f2d2d, #3d3a3a); /* gradiente suave */
+    color: #dcdcdc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3em;
+    z-index: 200;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid #0a84ff; /* detalhe azul inferior */
+    transition: all 0.3s ease-in-out;
+}
+
+.simbolo{
+    width: 65px;
+    margin: 0 auto;
+}
+
+.simBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* LOGO */
+.navleft .searchbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none; /* remove o fundo sólido */
+    margin-left: 30px;
+}
+
+.navleft .icon_home {
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.navleft .icon_home:hover {
+    color: #5dbbff;
+}
+
+/* MENU */
+.navleft .ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.navleft .textonavLeft {
+    position: relative;
+    text-decoration: none;
+    color: #d0d0d0;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.navleft .textonavLeft:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Efeito de linha animada ao passar o mouse */
+.navleft .textonavLeft::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background-color: #0a84ff;
+    transition: width 0.3s ease-in-out;
+}
+
+.navleft .textonavLeft:hover::after {
+    width: 100%;
+}
+
+/* Animação de leve brilho na barra quando o mouse entra */
+.navleft:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+
+/*HOVER MENU*/
+
+/* Container do dropdown */
+.dropdown-container {
+    position: relative;
+}
+
+/* Menu dropdown (inicialmente escondido) */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 300px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    margin-top: 12px;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* Itens do dropdown */
+.dropdown li {
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown a:hover {
+    background-color: #ffffff;
+    color: #007bff;
+    border-radius: 3%;
+}
+
+/* Efeito hover - mostra o dropdown */
+.dropdown-container:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Indicador visual de que tem dropdown */
+.dropdown-container > a::after {
+    content: " ▼";
+    font-size: 0.5em;
+    margin-left: 5px;
+}
